@@ -1,8 +1,7 @@
-class Dictionary
+module Dictionary
 
-  def initialize  
-    @lowercase= {
-    'a' => '0.....',
+  def lowercase
+    { 'a' => '0.....',
     'b' => '0.0...',
     'c' => '00....',
     'd' => '00.0..',
@@ -28,7 +27,6 @@ class Dictionary
     'x' => '00..00',
     'y' => '00.000',
     'z' => '0..000',
-    ' ' => '......',
-    }
+    ' ' => '......', }
   end
 end
