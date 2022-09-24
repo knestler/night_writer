@@ -1,7 +1,5 @@
-require 'dictionary'
-require './lib/write_braille/'
+require 'spec_helper'
  
-
 RSpec.describe do WriteBraille
   it 'can translate to braille' do
     phrase = WriteBraille.new
