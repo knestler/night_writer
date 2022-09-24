@@ -1,5 +1,6 @@
 require 'simplecov'
-SimpleCov.start˚
+SimpleCov.start
 
-# All spec files here as:
-# require_relative
+# All spec files here as relative:
+require 'dictionary'
+require './lib/write_braille/'
