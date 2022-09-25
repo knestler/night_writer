@@ -1,15 +1,20 @@
-class NightWriter
-  
-  reader = File.open(ARGV[0], 'r')
-  incoming_text = reader.read
-  reader.close
+# require './lib/dictionary/'
+# require './lib/write_braille/'
+require './spec/spec_helper/'
 
-  text_count =  "Created 'braille.txt' containing #{incoming_text.length} characters"
+reader = File.open(ARGV[0], 'r')
+incoming_text = reader.read
+reader.close
 
-  return_letter = 
-  writer = File.open(ARGV[1], 'w')
-  writer.write(text_count)
-  writer.close
+braille = WriteBraille.new.write_braille(incoming_text)
 
-end
+writer = File.open(ARGV[1], 'w')
+writer.write(braille)
+
+text_count =  "Created #{ARGV[1]} containing #{incoming_text.length} characters"
+p text_count
+
+writer.close
+
+
 
