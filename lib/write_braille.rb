@@ -10,11 +10,11 @@ class WriteBraille
     row1 = []; row2 = []; row3 = []
     translate_to_braille(text).each { |line|row1 << line[0]+line[1]; row2 << line[2]+line[3]; row3 << line[4]+line[5]}
     until row1[40..-1] == nil
-      p row1[0..39].join, row2[0..39].join, row3[0..39].join 
+      return row1[0..39].join("\n"), row2[0..39].join("\n"), row3[0..39].join
       row1 = row1[40..-1]; row2 = row2[40..-1]; row3 = row3[40..-1]
     end
     if row1[40..-1] == nil
-      p row1[0..39].join, row2[0..39].join, row3[0..39].join
+      return row1[0..39].join + "\n" + row2[0..39].join + "\n" + row3[0..39].join
     end
   end
 
