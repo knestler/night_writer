@@ -10,16 +10,12 @@ class WriteEnglish
         english_phrase.join
       end
       
-      def write_english(text)
-        english = []
-        x = text.split("\n").map { |row| row.scan(/../)}
-        o = x.each_slice(3) do |a| 
-          t = a.transpose
-          t.each do |letter|
-            english << letter.join
-          end
-        end
-        english
-
+  def write_english(text)
+    english = []
+    text.split("\n").map { |row| 
+      row.scan(/../)}.each_slice(3) { |a| 
+        a.transpose.each { |letter|
+        english << letter.join}}
+    english
   end
 end
