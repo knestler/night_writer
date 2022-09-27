@@ -6,9 +6,9 @@ class WriteEnglish
     write_english(text).each { |element|
       lowercase_alphabet.each { |letter, braille|
         english_phrase << letter if element == braille
-        }}
-        english_phrase.join
-      end
+    }}
+    english_phrase.join
+  end
       
   def write_english(text)
     english = []
