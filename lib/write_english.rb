@@ -12,8 +12,8 @@ class WriteEnglish
       
   def write_english(text)
     english = []
-    text.split("\n").map { |row| 
-      row.scan(/../)}.each_slice(3) { |a| 
+    text.split("\n").map { |row|
+      row.scan(/../)}.each_slice(3) { |a|
         a.transpose.each { |letter|
         english << letter.join}}
     english
