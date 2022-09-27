@@ -1,6 +1,6 @@
 module Dictionary
 
-  def lowercase
+  def lowercase_alphabet
     { 'a' => '0.....',
     'b' => '0.0...',
     'c' => '00....',

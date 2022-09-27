@@ -5,4 +5,7 @@ SimpleCov.start
 require './lib/dictionary'
 require './lib/write_braille/'
 require './lib/write_english/'
+require './lib/file_parser/'
+
+
 
