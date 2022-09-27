@@ -1,10 +1,6 @@
 require './spec/spec_helper/'
 
 reader = File.open(ARGV[0], 'r')
-# reader.each_line { |line|
-#   puts line
-# }
-# require 'pry'; binding.pry
 incoming_text = reader.read
 reader.close
 
